@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 const db = require("./models");
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
+//mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useFindAndModify: false });
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -16,9 +16,9 @@ app.use(express.static("public"));
 app.use(logger("dev"));
 
 
-db.on("error", error => {
+/*db.on("error", error => {
   console.log("Database Error:", error);
-});
+});*/
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 });
 
 // routes
-app.use(require("./routes/api.js"));
+//app.use(require("./routes/api.js"));
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
