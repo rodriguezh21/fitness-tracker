@@ -1,11 +1,10 @@
-const router = require("express-router")();
-const db = require("../models")
+const router = require("express").Router();
+const db = require("../models/workout")
 
 router.get("/api/workouts", (req, res) => {
-    db.workout.find({})
-      .sort({ date: -1 })
-      .then(workout => {
-        res.json(workout);
+    db.find({})
+      .then(dbworkout => {
+        res.json(dbworkout);
       })
       .catch(err => {
         res.status(400).json(err);
@@ -13,9 +12,9 @@ router.get("/api/workouts", (req, res) => {
   });
 
 router.post("/api/workouts", ({ body }, res) => {
-  db.workout.create(body)
-    .then(workout => {
-      res.json(workout);
+    db.create({body})
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.status(400).json(err);
@@ -23,9 +22,9 @@ router.post("/api/workouts", ({ body }, res) => {
 });
 
 router.get("/api/workouts/range", (req, res) => {
-  db.workout.find()
-    .then(workout => {
-      res.json(workout);
+    db.find()
+    .then(dbworkout => {
+      res.json(dbworkout);
     })
     .catch(err => {
       res.json(err);
