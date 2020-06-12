@@ -1,8 +1,3 @@
-# Fitness-Tracker
-
-## Homework 17
-
-***
 # Fitness Tracker ![Image of Badge](https://img.shields.io/badge/Fitness%20Tracker-v1.0.0-blue)
 
 ***
@@ -13,7 +8,7 @@ Fitness Tracker is an app that manages your workouts very easily and efficient. 
 ***
 ## How it works
 
-./assets/images/Fitness-Tracker.gif
+(./assets/images/Fitness-Tracker.gif)
 
 ## Table of Contents
 
