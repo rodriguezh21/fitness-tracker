@@ -8,7 +8,7 @@ Fitness Tracker is an app that manages your workouts very easily and efficient. 
 ***
 ## How it works
 
-<img src="/public/assets/images/Fitness-Tracker.gif">
+<img src="Develop/public/assets/images/Fitness-Tracker.gif">
 
 ## Table of Contents
 
